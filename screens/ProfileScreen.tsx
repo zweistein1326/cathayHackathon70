@@ -6,25 +6,25 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 
-export default function HomeScreen({route,navigation}: RootStackScreenProps<'Home'>) {
-//   const {name,refNum}= route.params;
+export default function ProfileScreen({route,navigation}: RootStackScreenProps<'Profile'>) {
+  const {name,refNum}= route.params;
   
     return (
     <View style={styles.container}>
         <View>
             <Text style={styles.title}> Time to Flight: 00:24:11</Text>
         </View>
-      {/* <Text style={styles.title}>Home</Text> */}
+      {/* <Text style={styles.title}>Profile</Text> */}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-      {/* <EditScreenInfo path="/screens/HomeScreen.tsx" /> */}
+      {/* <EditScreenInfo path="/screens/ProfileScreen.tsx" /> */}
       
-      {/* <Text style={styles.title}> Name:{name}</Text>
-      <Text style={styles.title}> Reference No. {refNum}</Text> */}
+      <Text style={styles.title}> Name:{name}</Text>
+      <Text style={styles.title}> Reference No. {refNum}</Text>
       <Button title="Go to Shop" onPress={()=>{
           navigation.navigate('Shop');
       }}/>
 
-      {/* Use a light status bar on iOS to account for the black space above the Home */}
+      {/* Use a light status bar on iOS to account for the black space above the Profile */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );

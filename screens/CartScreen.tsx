@@ -6,7 +6,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 
-export default function HomeScreen({route,navigation}: RootStackScreenProps<'Home'>) {
+export default function CartScreen({route,navigation}: RootStackScreenProps<'Cart'>) {
 //   const {name,refNum}= route.params;
   
     return (
@@ -14,9 +14,9 @@ export default function HomeScreen({route,navigation}: RootStackScreenProps<'Hom
         <View>
             <Text style={styles.title}> Time to Flight: 00:24:11</Text>
         </View>
-      {/* <Text style={styles.title}>Home</Text> */}
+      {/* <Text style={styles.title}>Cart</Text> */}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-      {/* <EditScreenInfo path="/screens/HomeScreen.tsx" /> */}
+      {/* <EditScreenInfo path="/screens/CartScreen.tsx" /> */}
       
       {/* <Text style={styles.title}> Name:{name}</Text>
       <Text style={styles.title}> Reference No. {refNum}</Text> */}
@@ -24,7 +24,7 @@ export default function HomeScreen({route,navigation}: RootStackScreenProps<'Hom
           navigation.navigate('Shop');
       }}/>
 
-      {/* Use a light status bar on iOS to account for the black space above the Home */}
+      {/* Use a light status bar on iOS to account for the black space above the Cart */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
